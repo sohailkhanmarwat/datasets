@@ -195,10 +195,10 @@ def read_data_sets(train_dir,
 #  TEST_IMAGES = 't10k-images-idx3-ubyte.gz'
 #  TEST_LABELS = 't10k-labels-idx1-ubyte.gz'
 #  
-  TRAIN_IMAGES = numpy.load("../predata/XtrainWindowSize" + str(windowSize) + "PCA" + str(numPCAcomponents) + "testRatio" + str(testRatio)  + ".npy")
-  TRAIN_LABELS = numpy.load("../predata/ytrainWindowSize" + str(windowSize) + "PCA" + str(numPCAcomponents) + "testRatio" + str(testRatio) + ".npy")
-  TEST_IMAGES  = numpy.load("../predata/XtestWindowSize" + str(windowSize) + "PCA" + str(numPCAcomponents) + "testRatio" + str(testRatio) + ".npy")
-  TEST_LABELS  = numpy.load("../predata/ytestWindowSize" + str(windowSize) + "PCA" + str(numPCAcomponents) + "testRatio" + str(testRatio) + ".npy")
+  TRAIN_IMAGES = numpy.load("./predata/XtrainWindowSize" + str(windowSize) + "PCA" + str(numPCAcomponents) + "testRatio" + str(testRatio)  + ".npy")
+  TRAIN_LABELS = numpy.load("./predata/ytrainWindowSize" + str(windowSize) + "PCA" + str(numPCAcomponents) + "testRatio" + str(testRatio) + ".npy")
+  TEST_IMAGES  = numpy.load("./predata/XtestWindowSize" + str(windowSize) + "PCA" + str(numPCAcomponents) + "testRatio" + str(testRatio) + ".npy")
+  TEST_LABELS  = numpy.load("./predata/ytestWindowSize" + str(windowSize) + "PCA" + str(numPCAcomponents) + "testRatio" + str(testRatio) + ".npy")
 
 
   local_file = base.maybe_download(TRAIN_IMAGES, train_dir,
@@ -247,9 +247,9 @@ def load_indianpines(train_dir=''):
   testRatio = 0.75  
   dtype=dtypes.float32
   reshape = False
-  train_images = numpy.load("../predata/XtrainWindowSize" + str(windowSize) + "PCA" + str(numPCAcomponents) + "testRatio" + str(testRatio)  + ".npy")
-  train_labels = numpy.load("../predata/ytrainWindowSize" + str(windowSize) + "PCA" + str(numPCAcomponents) + "testRatio" + str(testRatio) + ".npy")
-  test_images  = numpy.load("../predata/XtestWindowSize" + str(windowSize) + "PCA" + str(numPCAcomponents) + "testRatio" + str(testRatio) + ".npy")
-  test_labels  = numpy.load("../predata/ytestWindowSize" + str(windowSize) + "PCA" + str(numPCAcomponents) + "testRatio" + str(testRatio) + ".npy")
+  train_images = numpy.load("./predata/XtrainWindowSize" + str(windowSize) + "PCA" + str(numPCAcomponents) + "testRatio" + str(testRatio)  + ".npy")
+  train_labels = numpy.load("./predata/ytrainWindowSize" + str(windowSize) + "PCA" + str(numPCAcomponents) + "testRatio" + str(testRatio) + ".npy")
+  test_images  = numpy.load("./predata/XtestWindowSize" + str(windowSize) + "PCA" + str(numPCAcomponents) + "testRatio" + str(testRatio) + ".npy")
+  test_labels  = numpy.load("./predata/ytestWindowSize" + str(windowSize) + "PCA" + str(numPCAcomponents) + "testRatio" + str(testRatio) + ".npy")
 
   return DataSet(train_images, train_labels, dtype=dtype, reshape=reshape)
